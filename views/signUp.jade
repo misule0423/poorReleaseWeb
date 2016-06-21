@@ -1,0 +1,150 @@
+extends layout
+
+block content
+	.main_body_wrapper_01
+		.main_body_wrapper_02
+				.header_wrapper
+					h1
+						a(href='/')
+							img(src='/stylesheets/main_nav_logo.png')
+					.main_button_rapper
+						form(action='/signIn', method='get', style='display: inline;')
+							button.log-in_button 로그인
+
+		// multistep form
+		//form#msform(name="signUp", method="post", action="/signUp", ng-app='myApp', ng-controller='validateCtrl', novalidate='')
+		form#msform(name="signUp", method="post", action="/signUp")
+			fieldset
+				img(src='/stylesheets/main_lighthouse_02.png')
+				h2.fs-title Create your account
+				h3.fs-subtitle 이메일 및 비밀번호를 입력하세요
+				//input(type='email', name='email', ng-model='email', required='')
+				//span(style='color:red', ng-show='signUp.email.$dirty && signUp.email.$invalid')
+					//span(ng-show='signUp.email.$error.required') Email is required.
+					//span(ng-show='signUp.email.$error.email') Invalid email address.
+				input(type='text', name='email', placeholder='Email')
+				input(type='password', name='password', placeholder='Password')
+
+				//input(type='password', name='cpass', placeholder='Confirm Password')
+				input.next.next-action-button(type='button', name='next', value='다음')
+				a.facebook_button(href="/auth/facebook") 페이스북으로 가입하기
+				br
+				br
+				br
+
+			fieldset
+				img(src='/stylesheets/main_lighthouse_02.png')
+				h2.fs-title Create your account
+				h3.fs-subtitle 이름, 생년월일, 성별을 입력하세요
+				input.fname(type='text', name='fname', placeholder='First Name')
+				input.lname(type='text', name='lname', placeholder='Last Name')
+				input.year(type='text', name='year', placeholder='Year')
+				input.month(type='text', name='month', placeholder='Month')
+				input.day(type='text', name='day', placeholder='Day')
+				//input(type='text', name='phone', placeholder='Phone')
+				//textarea(name='address', placeholder='Address')
+				br
+				input.radio(type='radio', name='gender', value='male', checked='')
+				|  남자
+				input.radio(type='radio', name='gender', value='female')
+				|  여자
+				br
+				input.previous.action-button(type='button', name='previous', value='이전')
+				input.submit.action-button(type='submit', name='submit', value='완료')
+				//input.previous.action-button(type='button', name='previous', value='Previous')
+				//input.next.action-button(type='button', name='next', value='Next')
+				a.facebook_button(href="/auth/facebook") 페이스북으로 가입하기
+				br
+				br
+				br
+				
+
+	include footer
+
+	script.
+
+		//var app = angular.module('myApp', []);
+		//app.controller('validateCtrl', function($scope) {
+		//$scope.user = 'John Doe';
+		//$scope.email = 'john.doe@gmail.com';
+		//});
+
+		//jQuery time
+		var current_fs, next_fs, previous_fs; //fieldsets
+		var left, opacity, scale; //fieldset properties which we will animate
+		var animating; //flag to prevent quick multi-click glitches
+
+		$(".next").click(function(){
+			if(animating) return false;
+			animating = true;
+			
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			
+			//show the next fieldset
+			next_fs.show(); 
+			//hide the current fieldset with style
+			current_fs.animate({opacity: 0}, {
+				step: function(now, mx) {
+					//as the opacity of current_fs reduces to 0 - stored in "now"
+					//1. scale current_fs down to 80%
+					scale = 1 - (1 - now) * 0.2;
+					//2. bring next_fs from the right(50%)
+					left = (now * 50)+"%";
+					//3. increase opacity of next_fs to 1 as it moves in
+					opacity = 1 - now;
+					current_fs.css({
+		        'transform': 'scale('+scale+')',
+		        'position': 'absolute'
+		      });
+					next_fs.css({'left': left, 'opacity': opacity});
+				}, 
+				duration: 800, 
+				complete: function(){
+					current_fs.hide();
+					animating = false;
+				}, 
+				//this comes from the custom easing plugin
+				easing: 'easeInOutBack'
+			});
+		});
+
+		$(".previous").click(function(){
+			if(animating) return false;
+			animating = true;
+			
+			current_fs = $(this).parent();
+			previous_fs = $(this).parent().prev();
+			
+			//show the previous fieldset
+			previous_fs.show(); 
+			//hide the current fieldset with style
+			current_fs.animate({opacity: 0}, {
+				step: function(now, mx) {
+					//as the opacity of current_fs reduces to 0 - stored in "now"
+					//1. scale previous_fs from 80% to 100%
+					scale = 0.8 + (1 - now) * 0.2;
+					//2. take current_fs to the right(50%) - from 0%
+					left = ((1-now) * 50)+"%";
+					//3. increase opacity of previous_fs to 1 as it moves in
+					opacity = 1 - now;
+					current_fs.css({'left': left});
+					previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+				}, 
+				duration: 800, 
+				complete: function(){
+					current_fs.hide();
+					animating = false;
+				}, 
+				//this comes from the custom easing plugin
+				easing: 'easeInOutBack'
+			});
+		});
+
+		$(".submit").click(function(){
+			$("#msform").submit();
+		})
+
+
+
+       

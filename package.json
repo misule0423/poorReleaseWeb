@@ -1,0 +1,29 @@
+{
+  "name": "roop-web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "body-parser": "~1.13.2",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "~0.8.5",
+    "express": "~4.13.1",
+    "express-session": "~1.0.0",
+    "handlebars": "^4.0.5",
+    "jade": "~1.11.0",
+    "method-override": "~1.0.0",
+    "mongoose": "~3.8.1",
+    "morgan": "~1.6.1",
+    "passport": "~0.1.17",
+    "passport-facebook": "~1.0.2",
+    "passport-google-oauth": "~0.1.5",
+    "passport-local": "~0.1.6",
+    "passport-twitter": "~1.0.2",
+    "serve-favicon": "~2.3.0"
+  }
+}

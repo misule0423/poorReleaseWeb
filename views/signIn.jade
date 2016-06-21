@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	.main_body_wrapper_01
+		.main_body_wrapper_02
+				.header_wrapper
+					h1
+						a(href='/')
+							img(src='/stylesheets/main_nav_logo.png')
+					.main_button_rapper
+						form(action='/signUp', method='get', style='display: inline;')
+							button.sign-up_button 시작하기
+
+		// multistep form
+		form#msform(name="signIn", method="post", action="/signIn")
+			fieldset
+				img(src='/stylesheets/main_lighthouse_02.png')
+				h2.fs-title Login to your account
+				h3.fs-subtitle 이메일, 비밀번호를 입력하세요
+				input(type='text', name='email', placeholder='Email')
+				input(type='password', name='password', placeholder='Password')
+				input.submit.next-action-button(type='submit', name='submit', value='완료')
+				a.facebook_button(href="/auth/facebook") 페이스북으로 가입하기
+				br
+				br
+				br
+
+	include footer
+
+	script.
+
+		$(".submit").click(function(){
+			$("#msform").submit();
+		})

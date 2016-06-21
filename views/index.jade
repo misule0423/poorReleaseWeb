@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	.main_body_wrapper_01
+		.main_body_wrapper_02
+			.header_wrapper
+				h1
+					a(href='/')
+						img(src='/stylesheets/main_nav_logo.png')
+				.main_button_rapper
+					form(action='/signUp', method='get', style='display: inline;')
+						button.sign-up_button 시작하기
+					form(action='/signIn', method='get', style='display: inline;')
+						button.log-in_button 로그인
+
+		
+		.main_search_wrapper
+			.main_infomation
+				img(src='/stylesheets/main_lighthouse_02.png')
+				//h2 A searching app for you
+				//h2 who are looking for the world!
+				h2 세상의 모든 물건을 찾아주는 앱!!
+				p 당신이 찾고 있는 것은 물어보고, 당신이 알고 있는 것은 답해주세요.
+			
+			input.main_search_input(type='text', name='link', placeholder=' 당신이 찾고 있는 물건이 있는지 검색해보세요.')
+				
+			a.preview_button(href='preview') 미리보기
+
+
+	
+	include footer
+
+	
+
+

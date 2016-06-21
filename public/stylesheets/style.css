@@ -1,0 +1,773 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanssc.css);
+/*  한국어 */
+:lang(ko) {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+ /* 일본어 */
+:lang(ja) {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+ /* 중국어 (간체) */
+:lang(zh-Hans) {
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    line-height: 1;
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a{
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+h2 {
+    font-size: 35px;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+.main_body_wrapper_01 {
+    width: 100%;
+    height: 97%;
+    //height: 97.5%;
+    //background-image: url(BG-2.jpg);
+    background-image: url(main_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.main_body_wrapper_02 {
+    //width: 1022px;
+    width: 100%;
+    //height: 100%;
+    margin: 0 auto;
+     
+}
+
+button {
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    //font-family: "Roboto";
+    font-weight: 600;
+    background-repeat: no-repeat;
+    //padding: 10px 15px;
+    padding: 8px 13px;
+    border-radius: 5px;
+    border: 0px;
+    //margin: 0  10px;
+    margin: 0  6px;
+}
+
+
+.center-button_wrapper {
+    width: 322px;
+    margin: 0 auto;
+   
+}
+.center_button {
+    width: 322px;
+    padding: 15px 0;
+    margin: 5px 0;
+    font-size: 15px; 
+    background-color: #ffde00;
+     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    color: #283242;
+    
+    
+}
+
+#facebook_button{
+    background-color: #3d589d;
+    font-size: 16px;
+    color: #cfd0d1;
+     font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    
+    
+    
+}
+
+#inputtype_02 {
+    width:153px;
+    float: left;
+    margin: 0 0 0 8px;
+}
+
+#inputtype_02:first-child {
+    margin: 0 8px 0 0px;
+}
+
+.inputtype_02_wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#inputtype_03 {
+    width:99px;
+    float: left;
+    margin: 0 8px 0 0px;
+}
+
+#inputtype_03:last-child {
+    margin: 0 0px 0 8px;
+}
+
+.radio {
+    width: 140px;
+    margin: 0 auto;
+    padding: 20px 0 0 ;
+}
+
+label {
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    color: #6e7179;
+    
+}
+
+/* ---- HEADER ---- */
+
+.nav_bg_wrapper {
+    width: 100%;
+    //height: 95px;
+    height: 55px;
+    background-image: url(main_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;}
+
+.header_wrapper {
+    width: 100%;
+    //padding-top: 20px;
+    padding-top: 10px;  
+}
+
+/*
+.header_wrapper {
+     width: 100%;
+    padding-top: 30px;  
+    height: 65px;
+}
+*/
+.header_wrapper:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*
+.header_wrapper > h1 {
+    float: left;
+}
+*/
+
+.header_wrapper > h1 {
+    float: left;
+    padding: 3px 25px 
+
+}
+
+.user_button {
+    width: 40px;
+    height: 40px;
+    //background: red;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.sign-up_button {
+    background-color: #ffd740;
+    color: #283242;   
+    cursor:pointer;
+}
+
+.ask0-to-people_button {
+    border-radius: 0;
+    padding: 0;
+    background-color:rgba(0, 0, 0, 0.0);
+    margin: 0;
+    height: 37px;
+    cursor:pointer;
+    padding: 0px 10px 5px 10px;
+
+}
+
+.log-in_button {
+    background-color: #acb1b8;
+     color: #283242;
+    cursor:pointer;
+}
+
+.nav_search_input {
+    outline-color: #ffd740;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    color: #a0a1a1;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 9px 5px 10px 5px;
+    //border-bottom: 2px solid #949aa1; 
+    //width: 653px;
+    width: 67%;
+    display: block;
+    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+    //margin-left: 20px;
+    margin-left: 0px;
+
+}
+
+
+
+/*
+.main_button_rapper {
+    float: right;
+    height: 37px;
+}
+*/
+
+.main_button_rapper {
+    float: right;
+    padding: 2px 10px;
+
+}
+
+/* ---- search ---- */
+
+.main_search_wrapper {
+    position: relative;
+    top: 15%;
+    //top: 5%;
+    bottom: 20%;
+}
+
+/*
+.main_search_input{
+    font-family: "Roboto";
+    background-color: #fff;
+    font-weight: 100;
+    font-size: 12px;
+    color: #a0a1a1;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 5px 10px 5px;
+    border-bottom: 2px solid #949aa1; 
+    width: 832px;
+    display: block;
+    margin-top: 15px;
+    border-radius: 5px;
+    margin: 0  auto;
+    margin-bottom: 30px;
+}
+*/
+
+.main_search_input{
+    //outline-style: none;
+    outline-color: #ffd740;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    color: #a0a1a1;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 5px 10px 5px;
+    border-bottom: 2px solid #949aa1; 
+    width: 530px;
+    display: block;
+    border-radius: 5px;
+    margin: 0  auto;
+    //margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.main_infomation>img {
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 10px;
+    
+}
+
+.login_input_wrapper {
+    width: 322px;
+    margin: 0 auto;
+    padding: 5px 0 5px 0;
+    
+}
+
+.login_input {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color:rgba(0, 0, 0, 0.0);
+    font-weight:200;
+    font-size: 15px;
+    color: #6e7179;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 15px 0px 5px 0px;
+    border-bottom: 2px solid #6e7179; 
+    width: 322px;
+    display: block;
+    margin-top: 5px;
+}
+
+
+.login_error {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 322px;
+    padding: 17px 0;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px 0;
+    margin-top: 10px;
+    color: #cdcecf;
+    font-size: 14px;
+    
+    
+}
+
+
+.main_infomation>p {
+    text-align: center;
+    color: #e1e2e3;
+    margin: 10px 0 20px 0;
+}
+
+/*
+.main_infomation>p {
+    text-align: center;
+    color: #e1e2e3;
+    margin: 10px 0 20px 0;
+}
+*/
+.forgot_password_button {
+     background-color: rgba(0, 0, 0, 0.0);
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    padding: 10px 0;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100px;
+    width: 322px;
+}
+
+
+.preview_button {
+   background-color: rgba(0, 0, 0, 0.0);
+    color: #fff;
+    background-image: url(icon_preview.png);
+    background-repeat: no-repeat;
+    background-position: 0px 15px ;
+    padding: 20px 0 10px 30px;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100px;
+    width: 50px;
+}
+
+/*
+.preview_button {
+   background-color: rgba(0, 0, 0, 0.0);
+    color: #fff;
+    background-image: url(icon_preview.png);
+    background-repeat: no-repeat;
+    background-position: 0px;
+    padding: 10px 0 10px 30px;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: 'roboto' sans-serif;
+    font-weight: 100px;
+    width: 50px;
+}
+*/
+
+footer {
+    //background-color: #2C3441;
+    background: linear-gradient(to bottom, #000000 0%,#2D3748 100%);
+    //background-image: url(main_bg.png);
+    width: 100%;
+    height: 8%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    margin-top: 1px;
+
+}
+
+/*
+
+footer {
+    width: 1022px;
+    position: absolute;
+    bottom: 20px;
+    margin: auto;
+
+}
+*/
+
+footer:after{
+    content: "";
+    display: block;
+    clear: both; 
+}
+
+/*
+footer .footer_nav {
+    float: left;
+    padding: 16.5px 100px 
+}
+*/
+footer .footer_nav {
+    float: left;
+    padding: 20px 100px 
+}
+
+
+footer .sns_nav {
+    float: right;
+    padding: 16.5px 100px ;
+
+}
+
+footer nav .footer_nav {
+    width: 430px;
+
+}
+.footer_nav li a { 
+    font-size: 14px;
+    color: #fff;
+    font-family: "roboto";
+    font-weight: 200;
+
+}
+
+.footer_nav li {
+    float: left;
+    margin: 0 20px;
+}
+
+.footer_nav:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.sns_nav {
+    width: 230px;
+    margin: 0 auto;
+    padding: 10px 0 10px 0; 
+
+}
+.sns_nav li a { 
+    font-size: 14px;
+    color: #fff;
+}
+
+.sns_nav li {
+    float: left;
+    margin: 0 20px;
+}
+
+.sns_nav:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+
+* {margin: 0; padding: 0;}
+
+html {
+    height: 100%;
+    
+        linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+body {
+    font-family: montserrat, arial, verdana;
+}
+*/
+/*form styles*/
+#msform {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+#msform fieldset {
+    //background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+    
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    
+    /*stacking fieldsets above each other*/
+    position: relative;
+
+    font-weight: normal;
+    font-size: 14px;
+    //color: #666;
+    color: white;
+    margin-bottom: 20px;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    //font-family: montserrat;
+    font-family: 'Noto Sans KR', sans-serif;
+
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#msform .fname {
+    width: 48%;
+    float: left;
+}
+
+#msform .lname {
+    width: 48%;
+    float: right;
+}
+
+#msform .year {
+    width: 31%;
+    float: left;
+}
+
+#msform .month {
+    width: 31%;
+    float: center;
+}
+
+#msform .day{
+    width: 31%;
+    float: right;
+}
+
+#msform .radio{
+    width: 6%;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+#msform .facebook_button{
+
+    width: 210px;
+    //background: #27AE60;
+    background: #3d589d;
+    //font-weight: bold;
+    font-size: 14px;
+    //color: white;
+    color: #cfd0d1;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 43px;
+    margin: 3px 5px 10px 5px;
+}
+
+#msform .next-action-button {
+    width: 210px;
+    //background: #27AE60;
+    background: #ffd740;
+    font-weight: bold;
+    //color: white;
+    color: black;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 20px 5px;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    //background: #27AE60;
+    background: #ffd740;
+    font-weight: bold;
+    //color: white;
+    color: black;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 20px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+    //box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #ffd740;
+    color: black;
+}
+/*headings*/
+.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    //color: #2C3E50;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 11px;
+    //color: #666;
+    color: white;
+    margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    //color: #333;
+    color: black;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+    //background: #27AE60;
+    background: #ffd740;
+    //color: white;
+    color: black;
+
+}
+
+
+
+
